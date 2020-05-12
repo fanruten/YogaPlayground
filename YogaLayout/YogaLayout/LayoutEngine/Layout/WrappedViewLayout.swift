@@ -3,11 +3,14 @@ import UIKit
 import Yoga
 import YogaSwift
 
-public class WrappedViewLayout<View>: Layout where View: UIView {
+public class WrappedViewLayout<View>: Layout, ViewBuilder where View: UIView {
     private let configNodeBlock: ((YogaNode) -> Void)?
     private let configViewBlock: ((View) -> Void)?
     private let createViewBlock: (() -> View)
     
+    public var viewBuilder: ViewBuilder? {
+        return self
+    }
     public let children: [Layout]
         
     public init(createViewBlock: @escaping (() -> View) = { View(frame: .zero) },
@@ -34,9 +37,5 @@ public class WrappedViewLayout<View>: Layout where View: UIView {
     
     open func createView() -> UIView {
         return createViewBlock()
-    }
-    
-    open var viewRequired: Bool {
-        return true
     }
 }

@@ -6,6 +6,7 @@ import YogaSwift
 public class StackLayout: Layout {
     private let configNodeBlock: ((YogaNode) -> Void)?
     
+    public let viewBuilder: ViewBuilder? = nil
     public let children: [Layout]
     
     public init(configNode: ((YogaNode) -> Void)? = nil,
@@ -22,16 +23,5 @@ public class StackLayout: Layout {
         
     public func configNode(_ node: YogaNode) {
         configNodeBlock?(node)
-    }
-    
-    public func configView(_ view: UIView) {
-    }
-    
-    public func createView() -> UIView {
-        return UIView(frame: .zero)
-    }
-    
-    public var viewRequired: Bool {
-        return false
-    }
+    }    
 }

@@ -56,15 +56,15 @@ public class BasicViewHierarchyCreator {
                 frame = current.node.frame
             }
 
-            guard current.layout.viewRequired else {
+            guard let viewBuilder = current.layout.viewBuilder else {
                 return LayoutWithView(layoutWithNode: current, containerView: parent?.containerView ?? rootView, offset: frame.origin)
             }
 
-            let view = current.layout.createView()
+            let view = viewBuilder.createView()
             view.frame = frame
             
             configBlocks.append({
-                current.layout.configView(view)
+                viewBuilder.configView(view)
             })
 
             if let containerView = parent?.containerView {

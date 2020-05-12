@@ -62,7 +62,8 @@ let layout = StackLayout(
 ])
 
 let creator = BasicViewHierarchyCreator(rootComponent: layout,
-                                        boundingSize: CGSize(width: 390, height: CGFloat.nan))
+                                        boundingSize: CGSize(width: 390,
+                                                             height: CGFloat.nan))
 creator.calculateLayoutIfNeeded()
 let view = creator.createView()
 
