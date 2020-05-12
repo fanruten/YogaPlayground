@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B703308E246AF3BA0028D7D7 /* CompoundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703308D246AF3BA0028D7D7 /* CompoundLayout.swift */; };
+		B7033090246AF5C40028D7D7 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703308F246AF5C40028D7D7 /* LayoutView.swift */; };
 		B7805E742465A11A00FEA828 /* YogaLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B7805E722465A11A00FEA828 /* YogaLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7805E8C2465A14100FEA828 /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E7B2465A14100FEA828 /* StackLayout.swift */; };
 		B7805E932465A14100FEA828 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E832465A14100FEA828 /* Graph.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B703308D246AF3BA0028D7D7 /* CompoundLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundLayout.swift; sourceTree = "<group>"; };
+		B703308F246AF5C40028D7D7 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		B7805E6F2465A11A00FEA828 /* YogaLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YogaLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7805E722465A11A00FEA828 /* YogaLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaLayout.h; sourceTree = "<group>"; };
 		B7805E732465A11A00FEA828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +61,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B703308B246AF0890028D7D7 /* Main */ = {
+		B703308B246AF0890028D7D7 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
 				B7805E872465A14100FEA828 /* Layout.swift */,
@@ -66,7 +70,17 @@
 				B7805E862465A14100FEA828 /* ImageLayout.swift */,
 				B7805E8A2465A14100FEA828 /* TextLayout.swift */,
 			);
-			path = Main;
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B703308C246AF36E0028D7D7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B7805E8B2465A14100FEA828 /* LayoutContainerView.swift */,
+				B703308F246AF5C40028D7D7 /* LayoutView.swift */,
+				B703308D246AF3BA0028D7D7 /* CompoundLayout.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B7805E652465A11A00FEA828 = {
@@ -100,7 +114,8 @@
 		B7805E7A2465A14100FEA828 /* LayoutEngine */ = {
 			isa = PBXGroup;
 			children = (
-				B703308B246AF0890028D7D7 /* Main */,
+				B703308C246AF36E0028D7D7 /* Utilities */,
+				B703308B246AF0890028D7D7 /* Layout */,
 				B7805E822465A14100FEA828 /* ViewCreator */,
 			);
 			path = LayoutEngine;
@@ -109,7 +124,6 @@
 		B7805E822465A14100FEA828 /* ViewCreator */ = {
 			isa = PBXGroup;
 			children = (
-				B7805E8B2465A14100FEA828 /* LayoutContainerView.swift */,
 				B7805E832465A14100FEA828 /* Graph.swift */,
 				B7805E842465A14100FEA828 /* ViewCreator.swift */,
 			);
@@ -222,10 +236,12 @@
 				B7805E972465A14100FEA828 /* Layout.swift in Sources */,
 				B7805E8C2465A14100FEA828 /* StackLayout.swift in Sources */,
 				B7805E962465A14100FEA828 /* ImageLayout.swift in Sources */,
+				B703308E246AF3BA0028D7D7 /* CompoundLayout.swift in Sources */,
 				B7805E982465A14100FEA828 /* WrappedViewLayout.swift in Sources */,
 				B7805EA22465A14800FEA828 /* Measurement.swift in Sources */,
 				B7805EA32465A14800FEA828 /* CGFloat+Round.swift in Sources */,
 				B7805E9A2465A14100FEA828 /* TextLayout.swift in Sources */,
+				B7033090246AF5C40028D7D7 /* LayoutView.swift in Sources */,
 				B7805EA12465A14800FEA828 /* NSAttributedString+Copy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

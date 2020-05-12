@@ -21,7 +21,7 @@ let layout = StackLayout(
     children: [
         WrappedViewLayout<UIView>(
             children: [ 
-                ImageLayout(model: UIImage(named: "dude"),
+                ImageLayout(image: UIImage(named: "dude"),
                             configNode: ({ node in
                                 //node.size = YogaSize(width: 120, height: 120)
                                 //node.aspectRatio = 4/3
