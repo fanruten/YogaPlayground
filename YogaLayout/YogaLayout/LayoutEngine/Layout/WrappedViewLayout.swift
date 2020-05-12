@@ -10,10 +10,10 @@ public class WrappedViewLayout<View>: Layout where View: UIView {
     
     public let children: [Layout]
         
-    public init(children: [Layout] = [],
-                createViewBlock: @escaping (() -> View) = { View(frame: .zero) },
+    public init(createViewBlock: @escaping (() -> View) = { View(frame: .zero) },
                 configNode: ((YogaNode) -> Void)? = nil,
-                configView: ((View) -> Void)? = nil) {
+                configView: ((View) -> Void)? = nil,
+                children: [Layout] = []) {
         self.children = children
         self.createViewBlock = createViewBlock
         self.configNodeBlock = configNode

@@ -17,8 +17,20 @@ let subtitle = NSAttributedString(
     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)])
 
 let layout = StackLayout(
+    configNode: ({ node in
+        node.flexDirection = .row
+        node.flex = 1
+        node.padding = Edges(uniform: 8)
+    }),
     children: [
         WrappedViewLayout<UIView>(
+            configNode: ({ node in
+                node.flexDirection = .column
+                node.flex = 1
+            }),
+            configView: ({ view in
+                view.backgroundColor = .green
+            }),
             children: [
                 TextLayout(
                     text: title,
@@ -35,14 +47,7 @@ let layout = StackLayout(
                         view.layer.borderColor = UIColor.red.cgColor
                         view.layer.borderWidth = 1
                     }))
-            ],
-            configNode: ({ node in
-                node.flexDirection = .column
-                node.flex = 1
-            }),
-            configView: ({ view in
-                view.backgroundColor = .green
-            })
+            ]
         ),
         ImageLayout(
             image: UIImage(named: "dude"),
@@ -54,13 +59,7 @@ let layout = StackLayout(
                 view.layer.borderColor = UIColor.red.cgColor
                 view.layer.borderWidth = 1
             })),
-    ],
-    configNode: ({ node in
-        node.flexDirection = .row
-        node.flex = 1
-        node.padding = Edges(uniform: 8)        
-    })
-)
+])
 
 let creator = BasicViewHierarchyCreator(rootComponent: layout,
                                         boundingSize: CGSize(width: 390, height: CGFloat.nan))

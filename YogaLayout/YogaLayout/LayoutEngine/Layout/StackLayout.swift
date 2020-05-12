@@ -8,14 +8,14 @@ public class StackLayout: Layout {
     
     public let children: [Layout]
     
-    public init(optChildren: [Layout?] = [],
-                configNode: ((YogaNode) -> Void)? = nil) {
+    public init(configNode: ((YogaNode) -> Void)? = nil,
+                optChildren: [Layout?] = []) {
         self.children = optChildren.compactMap { $0 }
         self.configNodeBlock = configNode
     }
     
-    public init(children: [Layout] = [],
-                configNode: ((YogaNode) -> Void)? = nil) {
+    public init(configNode: ((YogaNode) -> Void)? = nil,
+                children: [Layout] = []) {
         self.children = children
         self.configNodeBlock = configNode
     }
