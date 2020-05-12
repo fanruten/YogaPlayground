@@ -26,7 +26,7 @@ let layout = StackLayout(
         WrappedViewLayout<UIView>(
             configNode: ({ node in
                 node.flexDirection = .column
-                node.flex = 1
+                node.margin.right = 8                
             }),
             configView: ({ view in
                 view.backgroundColor = .green
