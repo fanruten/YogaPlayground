@@ -87,21 +87,17 @@ public class YogaNode {
     // MARK: — Private
 
     private let _node: YGNodeRef
-    private var _isLeaf: Bool
     private var _subnodes: [YogaNode]
 
     private static var globalConfig: YGConfigRef = {
         let globalConfig = YGConfigNew()
-        //YGConfigSetExperimentalFeatureEnabled(globalConfig, YGExperimentalFeatureWebFlexBasis, true)
         YGConfigSetPointScaleFactor(globalConfig, Float(UIScreen.main.scale))
         return globalConfig!
     }()
 
     public init() {
         _node = YGNodeNewWithConfig(YogaNode.globalConfig)
-        //YGNodeSetContext(_node, (__bridge void *) view);
         _subnodes = []
-        _isLeaf = false
 
         let context = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
         YGNodeSetContext(_node, context)
@@ -164,8 +160,6 @@ public class YogaNode {
         YGNodeSetMeasureFunc(_node, nil)
 
         for (index, node) in _subnodes.enumerated() {
-            // TODO: set leaf to false
-            node._isLeaf = true
             YGNodeInsertChild(_node, node._node, UInt32(index))
         }
     }
