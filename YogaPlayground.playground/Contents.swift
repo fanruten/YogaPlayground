@@ -18,26 +18,46 @@ let subtitle = NSAttributedString(
 
 
 let layout = StackLayout(
-    childs: [
-        StackLayout(
-            childs: [
-                TextLayout(model: title,
+    children: [
+        WrappedViewLayout<UIView>(
+            children: [ 
+                ImageLayout(model: UIImage(named: "dude"),
+                            configNode: ({ node in
+                                //node.size = YogaSize(width: 120, height: 120)
+                                //node.aspectRatio = 4/3
+                                //node.size = .nan
+                                //node.flex = 1
+                            }),
+                            configView: ({ view in
+                                view.layer.borderColor = UIColor.red.cgColor
+                                view.layer.borderWidth = 1
+                            })),
+                TextLayout(text: title,
                            configNode: ({ node in
                             node.margin = Edges(bottom: 8)
+                           }),
+                           configView: ({ view in
+                            view.layer.borderColor = UIColor.red.cgColor
+                            view.layer.borderWidth = 1
                            })),
-                TextLayout(model: subtitle)
+                TextLayout(text: subtitle,
+                           configView: ({ view in
+                            view.layer.borderColor = UIColor.red.cgColor
+                            view.layer.borderWidth = 1
+                           }))
             ],
             configNode: ({ node in
                 node.flexDirection = .column
+                node.flex = 1
+            }),
+            configView: ({ view in
+                view.backgroundColor = .green
             })
-        ),
-        ImageLayout(model: UIImage(named: "dude"),
-                    configNode: ({ node in
-                        node.size = YogaSize(width: 120, height: 120)
-                    }))
+        )
     ],
     configNode: ({ node in
-        node.flexDirection = .row
+        //node.flexDirection = .row
+        node.flex = 1
         node.padding = Edges(uniform: 8)
     })
 )

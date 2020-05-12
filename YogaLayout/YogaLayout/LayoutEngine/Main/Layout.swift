@@ -10,7 +10,7 @@ public protocol Layout {
     func createView() -> UIView
     var viewRequired: Bool { get }
 
-    var childs: [Layout] { get }
+    var children: [Layout] { get }
 }
 
 open class LayoutProvider<ModelType> {

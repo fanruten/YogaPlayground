@@ -25,7 +25,7 @@ class Graph<T>: CustomDebugStringConvertible {
         self.items = items
     }
 
-    convenience init(root: T, childsForItem: (T) -> [T]) {
+    convenience init(root: T, childrenForItem: (T) -> [T]) {
         let rootItem = GraphItem(item: root, children: [])
 
         var result: [GraphItem<T>] = []
@@ -37,7 +37,7 @@ class Graph<T>: CustomDebugStringConvertible {
 
             result.append(item)
 
-            for child in childsForItem(item.item) {
+            for child in childrenForItem(item.item) {
                 let childItem = GraphItem(item: child)
 
                 index += 1

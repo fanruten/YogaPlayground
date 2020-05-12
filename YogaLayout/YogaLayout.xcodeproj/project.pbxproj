@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		B7805E742465A11A00FEA828 /* YogaLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B7805E722465A11A00FEA828 /* YogaLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7805E8C2465A14100FEA828 /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E7B2465A14100FEA828 /* StackLayout.swift */; };
-		B7805E902465A14100FEA828 /* CompoundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E7F2465A14100FEA828 /* CompoundLayout.swift */; };
 		B7805E932465A14100FEA828 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E832465A14100FEA828 /* Graph.swift */; };
 		B7805E942465A14100FEA828 /* ViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E842465A14100FEA828 /* ViewCreator.swift */; };
 		B7805E962465A14100FEA828 /* ImageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E862465A14100FEA828 /* ImageLayout.swift */; };
 		B7805E972465A14100FEA828 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E872465A14100FEA828 /* Layout.swift */; };
 		B7805E982465A14100FEA828 /* WrappedViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E882465A14100FEA828 /* WrappedViewLayout.swift */; };
-		B7805E992465A14100FEA828 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E892465A14100FEA828 /* BaseLayout.swift */; };
 		B7805E9A2465A14100FEA828 /* TextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E8A2465A14100FEA828 /* TextLayout.swift */; };
 		B7805E9B2465A14100FEA828 /* LayoutContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E8B2465A14100FEA828 /* LayoutContainerView.swift */; };
 		B7805EA12465A14800FEA828 /* NSAttributedString+Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7805E9D2465A14800FEA828 /* NSAttributedString+Copy.swift */; };
@@ -31,13 +29,11 @@
 		B7805E722465A11A00FEA828 /* YogaLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaLayout.h; sourceTree = "<group>"; };
 		B7805E732465A11A00FEA828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7805E7B2465A14100FEA828 /* StackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackLayout.swift; sourceTree = "<group>"; };
-		B7805E7F2465A14100FEA828 /* CompoundLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundLayout.swift; sourceTree = "<group>"; };
 		B7805E832465A14100FEA828 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		B7805E842465A14100FEA828 /* ViewCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCreator.swift; sourceTree = "<group>"; };
 		B7805E862465A14100FEA828 /* ImageLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLayout.swift; sourceTree = "<group>"; };
 		B7805E872465A14100FEA828 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		B7805E882465A14100FEA828 /* WrappedViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrappedViewLayout.swift; sourceTree = "<group>"; };
-		B7805E892465A14100FEA828 /* BaseLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
 		B7805E8A2465A14100FEA828 /* TextLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLayout.swift; sourceTree = "<group>"; };
 		B7805E8B2465A14100FEA828 /* LayoutContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutContainerView.swift; sourceTree = "<group>"; };
 		B7805E9D2465A14800FEA828 /* NSAttributedString+Copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Copy.swift"; sourceTree = "<group>"; };
@@ -61,6 +57,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B703308B246AF0890028D7D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B7805E872465A14100FEA828 /* Layout.swift */,
+				B7805E7B2465A14100FEA828 /* StackLayout.swift */,
+				B7805E882465A14100FEA828 /* WrappedViewLayout.swift */,
+				B7805E862465A14100FEA828 /* ImageLayout.swift */,
+				B7805E8A2465A14100FEA828 /* TextLayout.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		B7805E652465A11A00FEA828 = {
 			isa = PBXGroup;
 			children = (
@@ -92,15 +100,8 @@
 		B7805E7A2465A14100FEA828 /* LayoutEngine */ = {
 			isa = PBXGroup;
 			children = (
-				B7805E7B2465A14100FEA828 /* StackLayout.swift */,
-				B7805E7F2465A14100FEA828 /* CompoundLayout.swift */,
+				B703308B246AF0890028D7D7 /* Main */,
 				B7805E822465A14100FEA828 /* ViewCreator */,
-				B7805E862465A14100FEA828 /* ImageLayout.swift */,
-				B7805E872465A14100FEA828 /* Layout.swift */,
-				B7805E882465A14100FEA828 /* WrappedViewLayout.swift */,
-				B7805E892465A14100FEA828 /* BaseLayout.swift */,
-				B7805E8A2465A14100FEA828 /* TextLayout.swift */,
-				B7805E8B2465A14100FEA828 /* LayoutContainerView.swift */,
 			);
 			path = LayoutEngine;
 			sourceTree = "<group>";
@@ -108,6 +109,7 @@
 		B7805E822465A14100FEA828 /* ViewCreator */ = {
 			isa = PBXGroup;
 			children = (
+				B7805E8B2465A14100FEA828 /* LayoutContainerView.swift */,
 				B7805E832465A14100FEA828 /* Graph.swift */,
 				B7805E842465A14100FEA828 /* ViewCreator.swift */,
 			);
@@ -216,9 +218,7 @@
 				B7805E9B2465A14100FEA828 /* LayoutContainerView.swift in Sources */,
 				B7805E942465A14100FEA828 /* ViewCreator.swift in Sources */,
 				B7805E932465A14100FEA828 /* Graph.swift in Sources */,
-				B7805E992465A14100FEA828 /* BaseLayout.swift in Sources */,
 				B7805EA42465A14800FEA828 /* YogaText.swift in Sources */,
-				B7805E902465A14100FEA828 /* CompoundLayout.swift in Sources */,
 				B7805E972465A14100FEA828 /* Layout.swift in Sources */,
 				B7805E8C2465A14100FEA828 /* StackLayout.swift in Sources */,
 				B7805E962465A14100FEA828 /* ImageLayout.swift in Sources */,

@@ -8,29 +8,18 @@ public class WrappedViewLayout<View>: Layout where View: UIView {
     private let configViewBlock: ((View) -> Void)?
     private let createViewBlock: (() -> View)
     
-    public let childs: [Layout]
-    
-    public init(childs: [Layout] = [],
-                createViewBlock: @escaping (() -> View),
+    public let children: [Layout]
+        
+    public init(children: [Layout] = [],
+                createViewBlock: @escaping (() -> View) = { View(frame: .zero) },
                 configNode: ((YogaNode) -> Void)? = nil,
                 configView: ((View) -> Void)? = nil) {
-        self.childs = childs
+        self.children = children
         self.createViewBlock = createViewBlock
         self.configNodeBlock = configNode
         self.configViewBlock = configView
     }
-    
-    public convenience init(childs: [Layout] = [],
-                            configNode: ((YogaNode) -> Void)? = nil,
-                            configView: ((View) -> Void)? = nil) {
-        self.init(childs: childs,
-                  createViewBlock: ({
-                    return View(frame: .zero)
-                  }),
-                  configNode: configNode,
-                  configView: configView)
-    }
-    
+        
     open func configNode(_ node: YogaNode) {
         configNodeBlock?(node)
     }

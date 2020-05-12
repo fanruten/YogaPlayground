@@ -103,7 +103,7 @@ public class BasicViewHierarchyCreator {
 
     private lazy var layoutWithNodes: Graph<LayoutWithNode> = {
         let layoutsGraph = Graph<Layout>(root: rootComponent) { (component) -> [Layout] in
-            return component.childs
+            return component.children
         }
 
         return layoutsGraph.transformAndTraverseBreadth { (current, parent) -> LayoutWithNode in
