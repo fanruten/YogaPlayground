@@ -58,7 +58,7 @@ let layout = StackLayout(
             configView: ({ view in
                 view.layer.borderColor = UIColor.red.cgColor
                 view.layer.borderWidth = 1
-            })),
+            }))
 ])
 
 let creator = BasicViewHierarchyCreator(rootComponent: layout,
