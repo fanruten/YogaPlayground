@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B7F8D553246C62FD006022F3 /* UIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F8D551246C62FD006022F3 /* UIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7F8D55B246C635B006022F3 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D55A246C635B006022F3 /* AttributedStringBuilder.swift */; };
+		B7F8D55E246C63F4006022F3 /* TapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D55D246C63F4006022F3 /* TapHandler.swift */; };
+		B7F8D560246C6436006022F3 /* UIActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D55F246C6436006022F3 /* UIActions.swift */; };
+		B7F8D563246C64A3006022F3 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D562246C64A3006022F3 /* UIView+AutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7F8D54E246C62FD006022F3 /* UIUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F8D551246C62FD006022F3 /* UIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
 		B7F8D552246C62FD006022F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7F8D55A246C635B006022F3 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
+		B7F8D55D246C63F4006022F3 /* TapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapHandler.swift; sourceTree = "<group>"; };
+		B7F8D55F246C6436006022F3 /* UIActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActions.swift; sourceTree = "<group>"; };
+		B7F8D562246C64A3006022F3 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +54,38 @@
 		B7F8D550246C62FD006022F3 /* UIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				B7F8D561246C6494006022F3 /* AutoLayout */,
+				B7F8D55C246C63E6006022F3 /* TapHandler */,
+				B7F8D559246C6341006022F3 /* AttributedStringBuilder */,
 				B7F8D551246C62FD006022F3 /* UIUtils.h */,
 				B7F8D552246C62FD006022F3 /* Info.plist */,
 			);
 			path = UIUtils;
+			sourceTree = "<group>";
+		};
+		B7F8D559246C6341006022F3 /* AttributedStringBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				B7F8D55A246C635B006022F3 /* AttributedStringBuilder.swift */,
+			);
+			path = AttributedStringBuilder;
+			sourceTree = "<group>";
+		};
+		B7F8D55C246C63E6006022F3 /* TapHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B7F8D55D246C63F4006022F3 /* TapHandler.swift */,
+				B7F8D55F246C6436006022F3 /* UIActions.swift */,
+			);
+			path = TapHandler;
+			sourceTree = "<group>";
+		};
+		B7F8D561246C6494006022F3 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B7F8D562246C64A3006022F3 /* UIView+AutoLayout.swift */,
+			);
+			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +131,7 @@
 				TargetAttributes = {
 					B7F8D54D246C62FD006022F3 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -131,6 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F8D55E246C63F4006022F3 /* TapHandler.swift in Sources */,
+				B7F8D563246C64A3006022F3 /* UIView+AutoLayout.swift in Sources */,
+				B7F8D560246C6436006022F3 /* UIActions.swift in Sources */,
+				B7F8D55B246C635B006022F3 /* AttributedStringBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +301,7 @@
 		B7F8D557246C62FD006022F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7V6EA5DYR3;
@@ -276,6 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fanruten.UIUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +327,7 @@
 		B7F8D558246C62FD006022F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7V6EA5DYR3;
