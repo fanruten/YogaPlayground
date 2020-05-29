@@ -231,14 +231,6 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
     open func didUpdateChanges() {
     }
 
-    private func clearCache() {
-        for section in tableModel.sections {
-            for item in section.items {
-                item.cellHelper.clearCache()
-            }
-        }
-    }
-
     // MARK: — Consturction
 
     public typealias CellWidthMeasure = ((UIView) -> CGFloat)
@@ -300,12 +292,6 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
             }
             let tableItem = try? tableItemForIndexPath(indexPath)
 
-            if cell.contentView.subviews.count == 1,
-                let cellView = cell.contentView.subviews.first,
-                cellHelper.reuseCellView(cellView) {
-                return
-            }
-
             let view = cellHelper.createCellView(width: cell.bounds.width)
             for subview in cell.contentView.subviews {
                 subview.removeFromSuperview()
@@ -317,13 +303,6 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
             cell.contentView.backgroundColor = .clear
             view.frame = cell.bounds
         }
-    }
-
-    private func willSelectRowAtIndexPath(indexPath: IndexPath) -> IndexPath? {
-        guard let cellHelper = try? cellHelperForIndexPath(indexPath) else {
-            return nil
-        }
-        return cellHelper.willSelectRowAtIndexPath(indexPath)
     }
 
     private func indexPathForItemWithIdentifier(_ identifier: String) -> IndexPath? {
@@ -428,16 +407,8 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
                     case let .refresh(refreshRowChange):
                         let indexPath = IndexPath(row: Int(refreshRowChange.index),
                                                   section: refreshRowChange.sectionIndex)
+                        collectionView.reloadItems(at: [indexPath])
                         
-                        if collectionView.indexPathsForVisibleItems.contains(indexPath),
-                           let cellHelper = tableModel.sections[safe: indexPath.section]?.items[safe: indexPath.row]?.cellHelper {
-                            if !cellHelper.updateViewState() {
-                                collectionView.reloadItems(at: [indexPath])
-                            }
-                        } else {
-                            collectionView.reloadItems(at: [indexPath])
-                        }
-
                     case let .move(moveRowChange):
                         let fromIndexPath = IndexPath(row: Int(moveRowChange.initialIndex),
                                                       section: moveRowChange.initialSectionIndex)
@@ -525,9 +496,9 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
             }
 
             if sectionIndex == maxVisibleIndexPath.section, let items = section.items[safe: maxVisibleIndexPath.row..<section.items.count] {
-                sectionItemsCount = items.filter({ $0.cellHelper is DecorationCellHelper == false }).count
+                sectionItemsCount = items.count
             } else {
-                sectionItemsCount = section.items.filter({ $0.cellHelper is DecorationCellHelper == false }).count
+                sectionItemsCount = section.items.count
             }
             itemsToLast += sectionItemsCount
         }
@@ -553,12 +524,11 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
             return false
         }
 
-        return willSelectRowAtIndexPath(indexPath: indexPath) != nil
+        return indexPath
     }
 
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let tableItem = try? tableItemForIndexPath(indexPath) {
-            tableItem.cellHelper.willDisplayAtIndexPath(indexPath)
             tableItem.actions.onDisplay?(cell)
         }
     }

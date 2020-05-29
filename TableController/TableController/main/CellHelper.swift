@@ -1,54 +1,35 @@
 import Foundation
 import UIKit
 
-public protocol DecorationCellHelper { }
+public class CollectionViewCellAttributes {
+    var setupInitialCollectionAttributesForAppearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)?
+    var setupFinalCollectionAttributesForDisappearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)?
+    var setupDefaultCollectionAttributes: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)?
+}
 
 public protocol CellHelper: class {
-
-    var precalculatedLayoutSize: CGSize? { get }
-    func estimatedHeight(indexPath: IndexPath, width: CGFloat) -> CGFloat
-    func precalculateLayout(indexPath: IndexPath, width: CGFloat)
-    func willSelectRowAtIndexPath(_ indexPath: IndexPath) -> IndexPath?
-    func willDisplayAtIndexPath(_ indexPath: IndexPath)
-    func isEqual(to cellHelper: CellHelper) -> Bool
-    func clearCache()
-
+    /// Create view. It is assumed that `createCellView` can return same view for different calls
     func createCellView(width: CGFloat) -> UIView
-    func reuseCellView(_ cellView: UIView) -> Bool
-    func updateViewState() -> Bool
-
+    
+    /// May be called on background. Should calcualte cell size and set `precalculatedLayoutSize` property
+    func precalculateLayout(indexPath: IndexPath, width: CGFloat)
+    
+    /// Precalculated size of cell. Calculated by `precalculateLayout` call
+    var precalculatedLayoutSize: CGSize? { get }
+    
+    /// Used by auto-dffing algorithm to understand necessity of cell update
+    func isEqual(to cellHelper: CellHelper) -> Bool
+        
+    /// On refresh old cell replaced by new. This method allow leave old one
+    /// May be used in cases when cell caches view returned by `createCellView`
     func updateBy(_ cellHelper: CellHelper) -> Bool
-
-    var setupInitialCollectionAttributesForAppearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)? { get }
-    var setupFinalCollectionAttributesForDisappearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)? { get }
-    var setupDefaultCollectionAttributes: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)? { get }
+    
+    /// `UICollectionViewLayoutAttributes` for customization cell position. Commonly used to set z-index
+    var collectionViewCellAttributes: CollectionViewCellAttributes? { get }
 }
 
 extension CellHelper {
-
-    public func reuseCellView(_ cellView: UIView) -> Bool {
-        return false
-    }
     
-    public func updateViewState() -> Bool {
-        return false
-    }
-
-    public func willSelectRowAtIndexPath(_ indexPath: IndexPath) -> IndexPath? {
-        return indexPath
-    }
-
-    public func willDisplayAtIndexPath(_ indexPath: IndexPath) {        
-    }
-
-    public func topSeparatorEdgeInsets(indexPath: IndexPath) -> UIEdgeInsets? {
-        return nil
-    }
-
-    public func bottomSeparatorEdgeInsets(indexPath: IndexPath) -> UIEdgeInsets? {
-        return nil
-    }
-
     public func isEqual(to cellHelper: CellHelper) -> Bool {
         return cellHelper === self
     }
@@ -57,24 +38,9 @@ extension CellHelper {
         return false
     }
     
-    public var setupInitialCollectionAttributesForAppearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)? {
+    public var collectionViewCellAttributes: CollectionViewCellAttributes? {
         get {
             return nil
         }
-    }
-    
-    public var setupFinalCollectionAttributesForDisappearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)? {
-        get {
-            return nil
-        }
-    }
-    
-    public var setupDefaultCollectionAttributes: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)? {
-        get {
-            return nil
-        }
-    }
-    
-    public func clearCache() {
     }
 }
