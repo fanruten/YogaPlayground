@@ -47,6 +47,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7BE4E93248162CC000340B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7F8D50D246C5461006022F3 /* TableSection.swift */,
+				B7F8D514246C5461006022F3 /* TableModel.swift */,
+				B7F8D512246C5461006022F3 /* CellHelper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7BE4E9524816301000340B6 /* Changes */ = {
+			isa = PBXGroup;
+			children = (
+				B7F8D50A246C5461006022F3 /* AnimatedTableChange.swift */,
+				B7F8D50C246C5461006022F3 /* ModelTranformGenerator.swift */,
+				B7F8D50E246C5461006022F3 /* ListDiff.swift */,
+			);
+			path = Changes;
+			sourceTree = "<group>";
+		};
+		B7BE4E9624816336000340B6 /* DiffController */ = {
+			isa = PBXGroup;
+			children = (
+				B7F8D510246C5461006022F3 /* AutoDiffViewController.swift */,
+				B7F8D542246C5F16006022F3 /* OverlayHighlightedCell.swift */,
+				B7F8D511246C5461006022F3 /* AutoDiffCollectionController.swift */,
+			);
+			path = DiffController;
+			sourceTree = "<group>";
+		};
 		B7F8D4F4246C541F006022F3 = {
 			isa = PBXGroup;
 			children = (
@@ -76,16 +106,10 @@
 		B7F8D509246C5461006022F3 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				B7F8D50A246C5461006022F3 /* AnimatedTableChange.swift */,
-				B7F8D50C246C5461006022F3 /* ModelTranformGenerator.swift */,
-				B7F8D50D246C5461006022F3 /* TableSection.swift */,
-				B7F8D50E246C5461006022F3 /* ListDiff.swift */,
-				B7F8D510246C5461006022F3 /* AutoDiffViewController.swift */,
-				B7F8D542246C5F16006022F3 /* OverlayHighlightedCell.swift */,
-				B7F8D511246C5461006022F3 /* AutoDiffCollectionController.swift */,
-				B7F8D512246C5461006022F3 /* CellHelper.swift */,
+				B7BE4E9624816336000340B6 /* DiffController */,
+				B7BE4E9524816301000340B6 /* Changes */,
+				B7BE4E93248162CC000340B6 /* Model */,
 				B7F8D513246C5461006022F3 /* Collection+Safe.swift */,
-				B7F8D514246C5461006022F3 /* TableModel.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
