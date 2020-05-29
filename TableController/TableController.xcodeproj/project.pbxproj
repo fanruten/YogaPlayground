@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B7F8D503246C541F006022F3 /* TableController.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F8D501246C541F006022F3 /* TableController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7F8D515246C5461006022F3 /* AnimatedTableChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D50A246C5461006022F3 /* AnimatedTableChange.swift */; };
-		B7F8D516246C5461006022F3 /* AutoDiffTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D50B246C5461006022F3 /* AutoDiffTableController.swift */; };
 		B7F8D517246C5461006022F3 /* ModelTranformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D50C246C5461006022F3 /* ModelTranformGenerator.swift */; };
 		B7F8D518246C5461006022F3 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D50D246C5461006022F3 /* TableSection.swift */; };
 		B7F8D519246C5461006022F3 /* ListDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D50E246C5461006022F3 /* ListDiff.swift */; };
@@ -26,7 +25,6 @@
 		B7F8D501246C541F006022F3 /* TableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableController.h; sourceTree = "<group>"; };
 		B7F8D502246C541F006022F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7F8D50A246C5461006022F3 /* AnimatedTableChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTableChange.swift; sourceTree = "<group>"; };
-		B7F8D50B246C5461006022F3 /* AutoDiffTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffTableController.swift; sourceTree = "<group>"; };
 		B7F8D50C246C5461006022F3 /* ModelTranformGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTranformGenerator.swift; sourceTree = "<group>"; };
 		B7F8D50D246C5461006022F3 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		B7F8D50E246C5461006022F3 /* ListDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDiff.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				B7F8D50A246C5461006022F3 /* AnimatedTableChange.swift */,
-				B7F8D50B246C5461006022F3 /* AutoDiffTableController.swift */,
 				B7F8D50C246C5461006022F3 /* ModelTranformGenerator.swift */,
 				B7F8D50D246C5461006022F3 /* TableSection.swift */,
 				B7F8D50E246C5461006022F3 /* ListDiff.swift */,
@@ -173,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F8D519246C5461006022F3 /* ListDiff.swift in Sources */,
-				B7F8D516246C5461006022F3 /* AutoDiffTableController.swift in Sources */,
 				B7F8D51B246C5462006022F3 /* AutoDiffViewController.swift in Sources */,
 				B7F8D543246C5F16006022F3 /* OverlayHighlightedCell.swift in Sources */,
 				B7F8D51C246C5462006022F3 /* AutoDiffCollectionController.swift in Sources */,

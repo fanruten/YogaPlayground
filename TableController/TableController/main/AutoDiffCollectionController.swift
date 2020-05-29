@@ -272,7 +272,7 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
     private func tableItemForIndexPath(_ indexPath: IndexPath) throws -> TableItem {
         let section = tableModel.sections[indexPath.section]
         if indexPath.row > section.count - 1 {
-            throw AutoDiffTableControllerError.indexOutOfBounds(indexPath.row)
+            throw AutoDiffCollectionControllerError.indexOutOfBounds(indexPath.row)
         }
         return section[indexPath.row]
     }
