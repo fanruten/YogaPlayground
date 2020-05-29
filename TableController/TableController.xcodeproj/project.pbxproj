@@ -16,7 +16,7 @@
 		B7F8D51B246C5462006022F3 /* AutoDiffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D510246C5461006022F3 /* AutoDiffViewController.swift */; };
 		B7F8D51C246C5462006022F3 /* AutoDiffCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D511246C5461006022F3 /* AutoDiffCollectionController.swift */; };
 		B7F8D51D246C5462006022F3 /* CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D512246C5461006022F3 /* CellHelper.swift */; };
-		B7F8D51E246C5462006022F3 /* UICollection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D513246C5461006022F3 /* UICollection+Safe.swift */; };
+		B7F8D51E246C5462006022F3 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D513246C5461006022F3 /* Collection+Safe.swift */; };
 		B7F8D51F246C5462006022F3 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D514246C5461006022F3 /* TableModel.swift */; };
 		B7F8D543246C5F16006022F3 /* OverlayHighlightedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D542246C5F16006022F3 /* OverlayHighlightedCell.swift */; };
 /* End PBXBuildFile section */
@@ -33,7 +33,7 @@
 		B7F8D510246C5461006022F3 /* AutoDiffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffViewController.swift; sourceTree = "<group>"; };
 		B7F8D511246C5461006022F3 /* AutoDiffCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffCollectionController.swift; sourceTree = "<group>"; };
 		B7F8D512246C5461006022F3 /* CellHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellHelper.swift; sourceTree = "<group>"; };
-		B7F8D513246C5461006022F3 /* UICollection+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollection+Safe.swift"; sourceTree = "<group>"; };
+		B7F8D513246C5461006022F3 /* Collection+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		B7F8D514246C5461006022F3 /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		B7F8D542246C5F16006022F3 /* OverlayHighlightedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayHighlightedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +87,7 @@
 				B7F8D542246C5F16006022F3 /* OverlayHighlightedCell.swift */,
 				B7F8D511246C5461006022F3 /* AutoDiffCollectionController.swift */,
 				B7F8D512246C5461006022F3 /* CellHelper.swift */,
-				B7F8D513246C5461006022F3 /* UICollection+Safe.swift */,
+				B7F8D513246C5461006022F3 /* Collection+Safe.swift */,
 				B7F8D514246C5461006022F3 /* TableModel.swift */,
 			);
 			path = main;
@@ -177,7 +177,7 @@
 				B7F8D51B246C5462006022F3 /* AutoDiffViewController.swift in Sources */,
 				B7F8D543246C5F16006022F3 /* OverlayHighlightedCell.swift in Sources */,
 				B7F8D51C246C5462006022F3 /* AutoDiffCollectionController.swift in Sources */,
-				B7F8D51E246C5462006022F3 /* UICollection+Safe.swift in Sources */,
+				B7F8D51E246C5462006022F3 /* Collection+Safe.swift in Sources */,
 				B7F8D51F246C5462006022F3 /* TableModel.swift in Sources */,
 				B7F8D51D246C5462006022F3 /* CellHelper.swift in Sources */,
 				B7F8D515246C5461006022F3 /* AnimatedTableChange.swift in Sources */,
