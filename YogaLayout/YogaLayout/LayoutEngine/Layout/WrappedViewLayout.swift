@@ -3,7 +3,7 @@ import UIKit
 import Yoga
 import YogaSwift
 
-public class WrappedViewLayout<View>: Layout, ViewBuilder where View: UIView {
+open class WrappedViewLayout<View>: Layout, ViewBuilder where View: UIView {
     private let configNodeBlock: ((YogaNode) -> Void)?
     private let configViewBlock: ((View) -> Void)?
     private let createViewBlock: (() -> View)

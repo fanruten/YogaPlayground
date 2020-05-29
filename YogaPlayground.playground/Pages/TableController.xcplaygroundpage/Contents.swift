@@ -4,6 +4,7 @@ import YogaLayout
 import Yoga
 import YogaSwift
 import TableController
+import UIUtils
 
 let autoDiffViewController = AutoDiffViewController(identifier: "Test", cellWidthMeasure: nil)
 autoDiffViewController.view.frame = CGRect(x: 0, y: 0, width: 320, height: 800)

@@ -524,7 +524,7 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
             return false
         }
 
-        return indexPath
+        return true
     }
 
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -542,31 +542,6 @@ open class AutoDiffCollectionController: NSObject, UICollectionViewDataSource, U
 
         tableItem.actions.onTap?()
     }
-
-    /*
-     open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     guard
-     let tableItem = try? tableItemForIndexPath(indexPath),
-     let onTryEdit = tableItem.actions.onTryEdit else {
-     return false
-     }
-
-     return onTryEdit()
-     }
-
-     open func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
-     forRowAt indexPath: IndexPath) {
-     guard editingStyle == .delete else {
-     return
-     }
-
-     guard let tableItem = try? tableItemForIndexPath(indexPath) else {
-     return
-     }
-
-     tableItem.actions.onDelete?()
-     }
-     */
 
     // MARK: - UICollectionViewDataSource
 

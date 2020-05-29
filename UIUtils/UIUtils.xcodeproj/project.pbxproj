@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7BE4E8E24813F55000340B6 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE4E8D24813F55000340B6 /* UIColor+Utils.swift */; };
 		B7F8D553246C62FD006022F3 /* UIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F8D551246C62FD006022F3 /* UIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7F8D55B246C635B006022F3 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D55A246C635B006022F3 /* AttributedStringBuilder.swift */; };
 		B7F8D55E246C63F4006022F3 /* TapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D55D246C63F4006022F3 /* TapHandler.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7BE4E8D24813F55000340B6 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		B7F8D54E246C62FD006022F3 /* UIUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F8D551246C62FD006022F3 /* UIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
 		B7F8D552246C62FD006022F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7BE4E8C24813F3F000340B6 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				B7BE4E8D24813F55000340B6 /* UIColor+Utils.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		B7F8D544246C62FD006022F3 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		B7F8D550246C62FD006022F3 /* UIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				B7BE4E8C24813F3F000340B6 /* Colors */,
 				B7F8D561246C6494006022F3 /* AutoLayout */,
 				B7F8D55C246C63E6006022F3 /* TapHandler */,
 				B7F8D559246C6341006022F3 /* AttributedStringBuilder */,
@@ -168,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BE4E8E24813F55000340B6 /* UIColor+Utils.swift in Sources */,
 				B7F8D55E246C63F4006022F3 /* TapHandler.swift in Sources */,
 				B7F8D563246C64A3006022F3 /* UIView+AutoLayout.swift in Sources */,
 				B7F8D560246C6436006022F3 /* UIActions.swift in Sources */,

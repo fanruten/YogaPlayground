@@ -1,7 +1,7 @@
 import Foundation
 
 /// Simple Stack (Last-In-First-Out queue).
-struct Stack<Element> {
+private struct Stack<Element> {
     private var items = [Element]()
 
     /// Check that stack is empty.
@@ -99,7 +99,7 @@ public enum List {
         /// The moves from an index in the old collection to an index in the new collection.
         public var moves = Array<MoveIndex>()
 
-        // The indexes in the old collection that need updated.
+        /// The indexes in the old collection that need updated.
         public var updatesOld = IndexSet()
 
         /// The indexes in the new collection that need updated.

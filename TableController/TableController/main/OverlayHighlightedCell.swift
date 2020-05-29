@@ -1,11 +1,3 @@
-//
-//  OverlayHighlightedCell.swift
-//  AutoRuCellHelpers
-//
-//  Created by Ruslan V. Gumennyy on 31/10/2017.
-//  Copyright © 2017 Auto.ru. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

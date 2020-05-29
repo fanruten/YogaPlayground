@@ -28,8 +28,7 @@ public protocol CellHelper: class {
     var collectionViewCellAttributes: CollectionViewCellAttributes? { get }
 }
 
-extension CellHelper {
-    
+extension CellHelper {    
     public func isEqual(to cellHelper: CellHelper) -> Bool {
         return cellHelper === self
     }

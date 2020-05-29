@@ -34,8 +34,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         modelBuilder.addTextButton(title: "Kek", onTap: ({
             print("kek")
         }))
+        modelBuilder.addSeparatorItem(.small)
+        modelBuilder.addTextButton(title: "Kek", onTap: ({
+            print("kek")
+        }))
+        modelBuilder.addSeparatorItem(.medium)
+        modelBuilder.addTextButton(title: "Kek", onTap: ({
+            print("kek")
+        }))
+        
         autoDiffViewController.updateTableModel(with: TableModel(readyLoadMore: false, lastLoadFinishedWithError: false, sections: modelBuilder.build()))
-        autoDiffViewController.view.backgroundColor = .red
+        autoDiffViewController.view.backgroundColor = .white
         
         
         // Use a UIHostingController as window root view controller.

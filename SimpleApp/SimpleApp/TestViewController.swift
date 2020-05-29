@@ -3,11 +3,7 @@ import YogaLayout
 import Yoga
 import YogaSwift
 import TableController
-
-extension String {
-    static let nbsp = "\u{00a0}"
-}
-
+import UIUtils
 
 final class SimpleTableModelBuilder: BaseTableModelBuilder {
     
@@ -57,6 +53,7 @@ open class BaseTableModelBuilder {
         case big
     }
     
+    private let separatorColor = UIColor(rgb: 0xE5E5EA)
     private var items: [TableItem] = []
     private var idToNextIndex: [String: Int] = [:]
     
@@ -124,7 +121,6 @@ open class BaseTableModelBuilder {
         self.items = cleanedItems
     }
 
-    /*
     public func addSeparatorItem(_ type: SeparatorType, onDisplay: (() -> Void)? = nil) {
         let cellHelper: CellHelper
         let identifier: String
@@ -138,13 +134,13 @@ open class BaseTableModelBuilder {
 
         switch type {
         case .small:
-            cellHelper = SmallSeparatorCellHelper()
+            cellHelper = SmallSeparatorCellHelper(backgroundColor: separatorColor)
         case .customSmall(let insets):
             cellHelper = SmallSeparatorCellHelper(insets: insets)
         case .medium:
-            cellHelper = BigSeparatorCellHelper(height: 8, color: Appearance.General.largeSeparatorColor)
+            cellHelper = BigSeparatorCellHelper(height: 8, color: separatorColor)
         case .big:
-            cellHelper = BigSeparatorCellHelper(height: 16, color: Appearance.General.largeSeparatorColor)
+            cellHelper = BigSeparatorCellHelper(height: 16, color: separatorColor)
         }
 
         identifier = "separator_\(type)_\(suffix)"
@@ -170,6 +166,7 @@ open class BaseTableModelBuilder {
             cellHelper: BigSeparatorCellHelper(height: height, color: color))
     }
 
+    /*
     public func addLoadItem(_ identifier: String = "load") {
         let tableItem = TableItem(identifier: identifier, cellHelper: LoadCellHelper())
         addTableItem(tableItem)
@@ -304,281 +301,102 @@ open class LayoutCellHelper<Model>: CellHelper where Model: Equatable {
             return model == typedCellHelper.model && widthCache == typedCellHelper.widthCache
         }
     }
+}
+
+public enum EmptyCellHelperModel {
+    case empty
+}
+
+public class SmallSeparatorLayout: WrappedViewLayout<SeparatorView> {
+    public init(insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16),
+                backgroundColor: UIColor? = nil) {
+        
+        super.init(
+            configNode: ({ node in
+                node.flexDirection = .column
+                node.size.height = YGValue(1)
+            }),
+            configView: ({ (view) in
+                view.isUserInteractionEnabled = false
+                view.backgroundColor = backgroundColor
+                view.leftInset = insets.left
+                view.rightInset = insets.right
+            }))
+    }
+}
+
+public final class SmallSeparatorCellHelper: LayoutCellHelper<EmptyCellHelperModel> {
+
+    public init(insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16), backgroundColor: UIColor? = nil) {
+        super.init(model: .empty) { (_) -> Layout in
+            return SmallSeparatorLayout(insets: insets, backgroundColor: backgroundColor)
+        }
+    }
+}
+
+public final class BigSeparatorCellHelper: LayoutCellHelper<EmptyCellHelperModel> {
+
+    public init(height: CGFloat, color: UIColor) {
+        super.init(model: .empty) { (_) -> Layout in
+            let layout = WrappedViewLayout<UIView>(
+                configNode: ({ node in
+                    node.size.height = YGValue(height)
+                }),
+                configView: ({ view in
+                    view.backgroundColor = color
+                })
+            )
+            return layout
+        }
+    }
+}
+
+public class SeparatorView: UIView {
+    private let separator: UIView = UIView(frame: .zero)
+    private let separatorHeight: CGFloat
+
+    public var topInset: CGFloat
+    public var leftInset: CGFloat
+    public var rightInset: CGFloat
+
+    public var separatorColor: UIColor? {
+        set {
+            separator.backgroundColor = newValue
+        }
+        get {
+            return separator.backgroundColor
+        }
+    }
     
-    public var setupInitialCollectionAttributesForAppearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)?
-    public var setupFinalCollectionAttributesForDisappearing: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)?
-    public var setupDefaultCollectionAttributes: ((_ attributes: UICollectionViewLayoutAttributes) -> Void)?
-}
+    public override init(frame: CGRect) {
+        let scale = UIScreen.main.scale
 
-
-//
-//  AttributedString.swift
-//  Auto.ru
-//
-//  Created by Ruslan V. Gumennyy on 06/09/2017.
-//  Copyright © 2017 Auto.ru. All rights reserved.
-//
-
-import Foundation
-import UIKit
-
-public func + (x: NSAttributedString, y: NSAttributedString) -> NSAttributedString {
-    return x.concatenate(with: y)
-}
-
-public func += (x: inout NSAttributedString, y: NSAttributedString) {
-    x = x + y
-}
-
-extension NSAttributedString {
-    public func concatenate(with attributedString: NSAttributedString) -> NSAttributedString {
-        let x = NSMutableAttributedString()
-
-        x.append(self)
-        x.append(attributedString)
-
-        return x
-    }
-}
-
-extension String {
-    public func attributed() -> AttributedStringBuilder {
-        return AttributedStringBuilder(text: self)
-    }
-}
-
-public final class AttributedStringBuilder {
-    private let text: String
-
-    public init(text: String) {
-        self.text = text
-    }
-
-    // MARK: -
-
-    public private(set) var attributes = [NSAttributedString.Key: Any]()
-
-    private var paragraphStyle: NSMutableParagraphStyle {
-        if let style = attributes[.paragraphStyle] as? NSMutableParagraphStyle {
-            return style
+        if abs(scale - 2.0) < CGFloat.ulpOfOne {
+            separatorHeight = 0.5
+        } else if abs(scale - 3.0) < CGFloat.ulpOfOne {
+            separatorHeight = 0.33
+        } else {
+            separatorHeight = 1
         }
 
-        let style = NSMutableParagraphStyle()
+        topInset = 0
+        leftInset = 0
+        rightInset = 0
+    
+        separator.translatesAutoresizingMaskIntoConstraints = false
 
-        attributes[.paragraphStyle] = style
+        super.init(frame: frame)
 
-        return style
+        backgroundColor = .clear
+        addSubview(separator)
     }
 
-    // MARK: -
-
-    public func string() -> NSAttributedString {
-        return NSAttributedString(
-            string: text,
-            attributes: attributes
-        )
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError()
     }
 
-    public func mutableString() -> NSMutableAttributedString {
-        return NSMutableAttributedString(
-            string: text,
-            attributes: attributes
-        )
-    }
-
-    // MARK: -
-
-    public func alignment(_ value: NSTextAlignment) -> Self {
-        paragraphStyle.alignment = value
-
-        return self
-    }
-
-    public func allowsDefaultTighteningForTruncation(_ value: Bool) -> Self {
-        paragraphStyle.allowsDefaultTighteningForTruncation = value
-
-        return self
-    }
-
-    public func backgroundColor(_ value: UIColor) -> Self {
-        attributes[.backgroundColor] = value
-
-        return self
-    }
-
-    public func baseWritingDirection(_ value: NSWritingDirection) -> Self {
-        paragraphStyle.baseWritingDirection = value
-
-        return self
-    }
-
-    public func baselineOffset(_ value: Float) -> Self {
-        attributes[.baselineOffset] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func defaultTabInterval(_ value: CGFloat) -> Self {
-        paragraphStyle.defaultTabInterval = value
-
-        return self
-    }
-
-    public func expansion(_ value: Float) -> Self {
-        attributes[.expansion] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func firstLineHeadIndent(_ value: CGFloat) -> Self {
-        paragraphStyle.firstLineHeadIndent = value
-
-        return self
-    }
-
-    public func font(_ value: UIFont) -> Self {
-        attributes[.font] = value
-
-        return self
-    }
-
-    public func foregroundColor(_ value: UIColor) -> Self {
-        attributes[.foregroundColor] = value
-
-        return self
-    }
-
-    public func headIndent(_ value: CGFloat) -> Self {
-        paragraphStyle.headIndent = value
-
-        return self
-    }
-
-    public func hyphenationFactor(_ value: Float) -> Self {
-        paragraphStyle.hyphenationFactor = value
-
-        return self
-    }
-
-    public func kern(_ value: Float) -> Self {
-        attributes[.kern] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func ligature(_ value: Int) -> Self {
-        attributes[.ligature] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func lineBreakMode(_ value: NSLineBreakMode) -> Self {
-        paragraphStyle.lineBreakMode = value
-
-        return self
-    }
-
-    public func lineHeightMultiple(_ value: CGFloat) -> Self {
-        paragraphStyle.lineHeightMultiple = value
-
-        return self
-    }
-
-    public func lineSpacing(_ value: CGFloat) -> Self {
-        paragraphStyle.lineSpacing = value
-
-        return self
-    }
-
-    public func maximumLineHeight(_ value: CGFloat) -> Self {
-        paragraphStyle.maximumLineHeight = value
-
-        return self
-    }
-
-    public func minimumLineHeight(_ value: CGFloat) -> Self {
-        paragraphStyle.minimumLineHeight = value
-
-        return self
-    }
-
-    public func obliqueness(_ value: Float) -> Self {
-        attributes[.obliqueness] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func paragraphSpacing(_ value: CGFloat) -> Self {
-        paragraphStyle.paragraphSpacing = value
-
-        return self
-    }
-
-    public func paragraphSpacingBefore(_ value: CGFloat) -> Self {
-        paragraphStyle.paragraphSpacingBefore = value
-
-        return self
-    }
-
-    public func shadow(offsetX: CGFloat,
-                       offsetY: CGFloat,
-                       blurRadius: CGFloat,
-                       color: UIColor?) -> Self {
-        let value = NSShadow()
-        value.shadowOffset = CGSize(width: offsetX, height: offsetY)
-        value.shadowBlurRadius = blurRadius
-        value.shadowColor = color
-
-        attributes[.shadow] = value
-
-        return self
-    }
-
-    public func strikethroughColor(_ value: UIColor) -> Self {
-        attributes[.strikethroughColor] = value
-
-        return self
-    }
-
-    public func strikethroughStyle(_ value: Int) -> Self {
-        attributes[.strikethroughStyle] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func strokeColor(_ value: UIColor) -> Self {
-        attributes[.strokeColor] = value
-
-        return self
-    }
-
-    public func strokeWidth(_ value: Float) -> Self {
-        attributes[.strokeWidth] = NSNumber(value: value)
-
-        return self
-    }
-
-    public func tailIndent(_ value: CGFloat) -> Self {
-        paragraphStyle.tailIndent = value
-
-        return self
-    }
-
-    public func underlineColor(_ value: UIColor) -> Self {
-        attributes[.underlineColor] = value
-
-        return self
-    }
-
-    public func underlineStyle(_ value: NSUnderlineStyle) -> Self {
-        attributes[.underlineStyle] = NSNumber(value: value.rawValue)
-
-        return self
-    }
-}
-
-extension AttributedStringBuilder {
-    public func lineHeight(_ value: CGFloat) -> Self {
-        return minimumLineHeight(value).maximumLineHeight(value)
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        separator.frame = CGRect(x: leftInset, y: topInset, width: frame.width - leftInset - rightInset, height: separatorHeight)
     }
 }

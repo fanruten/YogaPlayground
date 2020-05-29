@@ -178,7 +178,7 @@ public class CollectionAutoDiffViewController: GenericAutoDiffViewController {
                 let attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
 
                 attributes.flatMap {
-                    collectionController?[itemIndexPath]?.cellHelper.setupInitialCollectionAttributesForAppearing?($0)
+                    collectionController?[itemIndexPath]?.cellHelper.collectionViewCellAttributes?.setupInitialCollectionAttributesForAppearing?($0)
                 }
 
                 return attributes
@@ -188,7 +188,7 @@ public class CollectionAutoDiffViewController: GenericAutoDiffViewController {
                 let attributes = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath)
 
                 attributes.flatMap {
-                    collectionController?[itemIndexPath]?.cellHelper.setupFinalCollectionAttributesForDisappearing?($0)
+                    collectionController?[itemIndexPath]?.cellHelper.collectionViewCellAttributes?.setupFinalCollectionAttributesForDisappearing?($0)
                 }
 
                 return attributes
@@ -198,7 +198,7 @@ public class CollectionAutoDiffViewController: GenericAutoDiffViewController {
                 let attributes = super.layoutAttributesForItem(at: indexPath)
 
                 attributes.flatMap {
-                    collectionController?[indexPath]?.cellHelper.setupDefaultCollectionAttributes?($0)
+                    collectionController?[indexPath]?.cellHelper.collectionViewCellAttributes?.setupDefaultCollectionAttributes?($0)
                 }
 
                 return attributes
@@ -212,7 +212,7 @@ public class CollectionAutoDiffViewController: GenericAutoDiffViewController {
                 for attributes in attributesCollection {
                     let indexPath = attributes.indexPath
                     if let item = collectionController?[indexPath] {
-                        item.cellHelper.setupDefaultCollectionAttributes?(attributes)
+                        item.cellHelper.collectionViewCellAttributes?.setupDefaultCollectionAttributes?(attributes)
                     }
                 }
                 
