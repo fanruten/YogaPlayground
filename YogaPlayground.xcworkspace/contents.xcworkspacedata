@@ -2,22 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UIUtils/UIUtils.xcodeproj">
+      location = "group:Packages/YogaLayout">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/TableController">
    </FileRef>
    <FileRef
       location = "group:SimpleApp/SimpleApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TableController/TableController.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:YogaSwift/YogaSwift.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Yoga/Yoga.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:YogaLayout/YogaLayout.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:YogaPlayground.playground">

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73C58A024853445005AB370 /* TableController in Frameworks */ = {isa = PBXBuildFile; productRef = B73C589F24853445005AB370 /* TableController */; };
+		B73C58A224853448005AB370 /* YogaLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B73C58A124853448005AB370 /* YogaLayout */; };
 		B7F8D52D246C5B71006022F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D52C246C5B71006022F3 /* AppDelegate.swift */; };
 		B7F8D52F246C5B71006022F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D52E246C5B71006022F3 /* SceneDelegate.swift */; };
 		B7F8D531246C5B71006022F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D530246C5B71006022F3 /* ContentView.swift */; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73C58A224853448005AB370 /* YogaLayout in Frameworks */,
+				B73C58A024853445005AB370 /* TableController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B73C589E24853445005AB370 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7F8D520246C5B71006022F3 = {
 			isa = PBXGroup;
 			children = (
 				B7F8D52B246C5B71006022F3 /* SimpleApp */,
 				B7F8D52A246C5B71006022F3 /* Products */,
+				B73C589E24853445005AB370 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +106,10 @@
 			dependencies = (
 			);
 			name = SimpleApp;
+			packageProductDependencies = (
+				B73C589F24853445005AB370 /* TableController */,
+				B73C58A124853448005AB370 /* YogaLayout */,
+			);
 			productName = SimpleApp;
 			productReference = B7F8D529246C5B71006022F3 /* SimpleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +362,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B73C589F24853445005AB370 /* TableController */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TableController;
+		};
+		B73C58A124853448005AB370 /* YogaLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = YogaLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7F8D521246C5B71006022F3 /* Project object */;
 }
