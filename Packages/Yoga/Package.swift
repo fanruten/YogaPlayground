@@ -13,8 +13,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Yoga", 
-            type: .static,
+            name: "Yoga",
+            type: .dynamic,
             targets: ["Yoga"]
         )
     ],

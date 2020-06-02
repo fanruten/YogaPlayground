@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B73C58A024853445005AB370 /* TableController in Frameworks */ = {isa = PBXBuildFile; productRef = B73C589F24853445005AB370 /* TableController */; };
-		B73C58A224853448005AB370 /* YogaLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B73C58A124853448005AB370 /* YogaLayout */; };
+		B7EBA92924856FE1009CE3B3 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = B7EBA92824856FE1009CE3B3 /* UIComponents */; };
+		B7EBA92B24856FE1009CE3B3 /* UIComponents in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B7EBA92824856FE1009CE3B3 /* UIComponents */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B7F8D52D246C5B71006022F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D52C246C5B71006022F3 /* AppDelegate.swift */; };
 		B7F8D52F246C5B71006022F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D52E246C5B71006022F3 /* SceneDelegate.swift */; };
 		B7F8D531246C5B71006022F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D530246C5B71006022F3 /* ContentView.swift */; };
@@ -17,6 +17,20 @@
 		B7F8D539246C5B75006022F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F8D537246C5B75006022F3 /* LaunchScreen.storyboard */; };
 		B7F8D541246C5BB1006022F3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D540246C5BB1006022F3 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7EBA92A24856FE1009CE3B3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7EBA92B24856FE1009CE3B3 /* UIComponents in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B7F8D529246C5B71006022F3 /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,8 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B73C58A224853448005AB370 /* YogaLayout in Frameworks */,
-				B73C58A024853445005AB370 /* TableController in Frameworks */,
+				B7EBA92924856FE1009CE3B3 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +113,7 @@
 				B7F8D525246C5B71006022F3 /* Sources */,
 				B7F8D526246C5B71006022F3 /* Frameworks */,
 				B7F8D527246C5B71006022F3 /* Resources */,
+				B7EBA92A24856FE1009CE3B3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -107,8 +121,7 @@
 			);
 			name = SimpleApp;
 			packageProductDependencies = (
-				B73C589F24853445005AB370 /* TableController */,
-				B73C58A124853448005AB370 /* YogaLayout */,
+				B7EBA92824856FE1009CE3B3 /* UIComponents */,
 			);
 			productName = SimpleApp;
 			productReference = B7F8D529246C5B71006022F3 /* SimpleApp.app */;
@@ -364,13 +377,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B73C589F24853445005AB370 /* TableController */ = {
+		B7EBA92824856FE1009CE3B3 /* UIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TableController;
-		};
-		B73C58A124853448005AB370 /* YogaLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = YogaLayout;
+			productName = UIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

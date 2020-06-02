@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Packages/YogaLayout">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/TableController">
-   </FileRef>
-   <FileRef
       location = "group:SimpleApp/SimpleApp.xcodeproj">
    </FileRef>
    <FileRef
