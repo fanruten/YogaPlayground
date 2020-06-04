@@ -1,7 +1,8 @@
-module Yoga {
-  umbrella header "public/Yoga-umbrella.h"
-
-  header "lib/yoga/YGValue.h"s
+framework module Yoga {
+  umbrella header "Yoga-umbrella.h"
+  header "YGValue.h"
+  header "Yoga.h"
+  
   export *
   module * { export * }
 }

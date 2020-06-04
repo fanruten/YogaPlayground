@@ -14,7 +14,6 @@ let package = Package(
     products: [
         .library(
             name: "Yoga",
-            type: .dynamic,
             targets: ["Yoga"]
         )
     ],
@@ -25,9 +24,9 @@ let package = Package(
             path: "Sources",
             exclude: [],
             sources: ["lib/yoga"],
-            publicHeadersPath: "Public",
+            publicHeadersPath: "public",
             cSettings: [ 
-                .headerSearchPath("./")
+                .headerSearchPath("lib/yoga")
             ]
         )
     ],

@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "YogaSwift",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v10)
     ],
     products: [
         .library(

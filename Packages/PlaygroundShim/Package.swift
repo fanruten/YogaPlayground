@@ -4,25 +4,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "UIComponents",
+    name: "PlaygroundShim",
     platforms: [
         .iOS(.v10)
     ],
     products: [
         .library(
-            name: "UIComponents", 
-            type: .dynamic,
-            targets: ["UIComponents"]
+            name: "PlaygroundShim", 
+            type: .static,
+            targets: ["PlaygroundShim"]
         )
     ],
     dependencies: [
-        .package(path: "YogaLayout"),
-        .package(path: "TableController")
+        .package(path: "../YogaLayout"),
+        .package(path: "../TableController"),
+        .package(path: "../TableModelBuilder")        
     ],
     targets: [
         .target(
-            name: "UIComponents",
-            dependencies: ["YogaLayout", "TableController"],
+            name: "PlaygroundShim",
+            dependencies: ["YogaLayout", "TableController", "TableModelBuilder"],
             path: "Sources"
         )
     ],

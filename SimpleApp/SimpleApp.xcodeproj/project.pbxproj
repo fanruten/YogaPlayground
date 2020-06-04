@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7EBA92924856FE1009CE3B3 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = B7EBA92824856FE1009CE3B3 /* UIComponents */; };
-		B7EBA92B24856FE1009CE3B3 /* UIComponents in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B7EBA92824856FE1009CE3B3 /* UIComponents */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B76485BD2489310D00861D05 /* PlaygroundShim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76485BC2489310D00861D05 /* PlaygroundShim.framework */; };
+		B76485BE2489310D00861D05 /* PlaygroundShim.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76485BC2489310D00861D05 /* PlaygroundShim.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B76485C22489312100861D05 /* TableController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76485BF2489312100861D05 /* TableController.framework */; };
+		B76485C32489312100861D05 /* TableController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76485BF2489312100861D05 /* TableController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B76485C42489312100861D05 /* UIUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76485C02489312100861D05 /* UIUtils.framework */; };
+		B76485C52489312100861D05 /* UIUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76485C02489312100861D05 /* UIUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B76485C62489312100861D05 /* YogaLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76485C12489312100861D05 /* YogaLayout.framework */; };
+		B76485C72489312100861D05 /* YogaLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76485C12489312100861D05 /* YogaLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F8D52D246C5B71006022F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D52C246C5B71006022F3 /* AppDelegate.swift */; };
 		B7F8D52F246C5B71006022F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D52E246C5B71006022F3 /* SceneDelegate.swift */; };
 		B7F8D531246C5B71006022F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F8D530246C5B71006022F3 /* ContentView.swift */; };
@@ -25,7 +31,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B7EBA92B24856FE1009CE3B3 /* UIComponents in Embed Frameworks */,
+				B76485C52489312100861D05 /* UIUtils.framework in Embed Frameworks */,
+				B76485BE2489310D00861D05 /* PlaygroundShim.framework in Embed Frameworks */,
+				B76485C72489312100861D05 /* YogaLayout.framework in Embed Frameworks */,
+				B76485C32489312100861D05 /* TableController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +42,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B76485BC2489310D00861D05 /* PlaygroundShim.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlaygroundShim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76485BF2489312100861D05 /* TableController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TableController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76485C02489312100861D05 /* UIUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76485C12489312100861D05 /* YogaLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YogaLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F8D529246C5B71006022F3 /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F8D52C246C5B71006022F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F8D52E246C5B71006022F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7EBA92924856FE1009CE3B3 /* UIComponents in Frameworks */,
+				B76485C42489312100861D05 /* UIUtils.framework in Frameworks */,
+				B76485BD2489310D00861D05 /* PlaygroundShim.framework in Frameworks */,
+				B76485C62489312100861D05 /* YogaLayout.framework in Frameworks */,
+				B76485C22489312100861D05 /* TableController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,10 @@
 		B73C589E24853445005AB370 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B76485BF2489312100861D05 /* TableController.framework */,
+				B76485C02489312100861D05 /* UIUtils.framework */,
+				B76485C12489312100861D05 /* YogaLayout.framework */,
+				B76485BC2489310D00861D05 /* PlaygroundShim.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +141,6 @@
 			);
 			name = SimpleApp;
 			packageProductDependencies = (
-				B7EBA92824856FE1009CE3B3 /* UIComponents */,
 			);
 			productName = SimpleApp;
 			productReference = B7F8D529246C5B71006022F3 /* SimpleApp.app */;
@@ -375,13 +394,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B7EBA92824856FE1009CE3B3 /* UIComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UIComponents;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7F8D521246C5B71006022F3 /* Project object */;
 }

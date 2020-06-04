@@ -3,6 +3,7 @@ import PlaygroundSupport
 import YogaLayout
 import Yoga
 import YogaSwift
+import PlaygroundShim
 
 extension String {
     static let nbsp = "\u{00a0}"
@@ -62,8 +63,7 @@ let layout = StackLayout(
 ])
 
 let creator = BasicViewHierarchyCreator(rootComponent: layout,
-                                        boundingSize: CGSize(width: 390,
-                                                             height: CGFloat.nan))
+                                        boundingSize: CGSize(width: 390, height: CGFloat.nan))
 creator.calculateLayoutIfNeeded()
 let view = creator.createView()
 

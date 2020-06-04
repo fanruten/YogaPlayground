@@ -1,0 +1,1881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		OBJ_103 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Stub.swift */; };
+		OBJ_105 /* TableModelBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TableModelBuilder::TableModelBuilder::Product" /* TableModelBuilder.framework */; };
+		OBJ_106 /* TableController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TableController::TableController::Product" /* TableController.framework */; };
+		OBJ_107 /* UIUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "UIUtils::UIUtils::Product" /* UIUtils.framework */; };
+		OBJ_108 /* YogaLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "YogaLayout::YogaLayout::Product" /* YogaLayout.framework */; };
+		OBJ_109 /* YogaSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "YogaSwift::YogaSwift::Product" /* YogaSwift.framework */; };
+		OBJ_110 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yoga::Yoga::Product" /* Yoga.framework */; };
+		OBJ_128 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_133 /* AnimatedTableChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* AnimatedTableChange.swift */; };
+		OBJ_134 /* ListDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ListDiff.swift */; };
+		OBJ_135 /* ModelTranformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ModelTranformGenerator.swift */; };
+		OBJ_136 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Collection+Safe.swift */; };
+		OBJ_137 /* AutoDiffCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* AutoDiffCollectionController.swift */; };
+		OBJ_138 /* AutoDiffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* AutoDiffViewController.swift */; };
+		OBJ_139 /* OverlayHighlightedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* OverlayHighlightedCell.swift */; };
+		OBJ_140 /* CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* CellHelper.swift */; };
+		OBJ_141 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* TableModel.swift */; };
+		OBJ_142 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* TableSection.swift */; };
+		OBJ_144 /* UIUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "UIUtils::UIUtils::Product" /* UIUtils.framework */; };
+		OBJ_151 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Package.swift */; };
+		OBJ_156 /* BaseTableModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* BaseTableModelBuilder.swift */; };
+		OBJ_157 /* LayoutCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* LayoutCellHelper.swift */; };
+		OBJ_158 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* SeparatorView.swift */; };
+		OBJ_160 /* YogaLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "YogaLayout::YogaLayout::Product" /* YogaLayout.framework */; };
+		OBJ_161 /* YogaSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "YogaSwift::YogaSwift::Product" /* YogaSwift.framework */; };
+		OBJ_162 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yoga::Yoga::Product" /* Yoga.framework */; };
+		OBJ_163 /* TableController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TableController::TableController::Product" /* TableController.framework */; };
+		OBJ_164 /* UIUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "UIUtils::UIUtils::Product" /* UIUtils.framework */; };
+		OBJ_175 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Package.swift */; };
+		OBJ_180 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* AttributedStringBuilder.swift */; };
+		OBJ_181 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* UIView+AutoLayout.swift */; };
+		OBJ_182 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* UIColor+Utils.swift */; };
+		OBJ_183 /* TapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* TapHandler.swift */; };
+		OBJ_184 /* UIActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* UIActions.swift */; };
+		OBJ_191 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Package.swift */; };
+		OBJ_196 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Utils.cpp */; };
+		OBJ_197 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* YGConfig.cpp */; };
+		OBJ_198 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* YGEnums.cpp */; };
+		OBJ_199 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* YGLayout.cpp */; };
+		OBJ_200 /* YGMarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* YGMarker.cpp */; };
+		OBJ_201 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* YGNode.cpp */; };
+		OBJ_202 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* YGNodePrint.cpp */; };
+		OBJ_203 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* YGStyle.cpp */; };
+		OBJ_204 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* YGValue.cpp */; };
+		OBJ_205 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Yoga.cpp */; };
+		OBJ_206 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* log.cpp */; };
+		OBJ_208 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_209 /* Yoga-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Yoga-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_210 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_211 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_212 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_218 /* ImageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ImageLayout.swift */; };
+		OBJ_219 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Layout.swift */; };
+		OBJ_220 /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* StackLayout.swift */; };
+		OBJ_221 /* TextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* TextLayout.swift */; };
+		OBJ_222 /* WrappedViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* WrappedViewLayout.swift */; };
+		OBJ_223 /* CompoundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* CompoundLayout.swift */; };
+		OBJ_224 /* LayoutContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* LayoutContainerView.swift */; };
+		OBJ_225 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* LayoutView.swift */; };
+		OBJ_226 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Graph.swift */; };
+		OBJ_227 /* ViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* ViewCreator.swift */; };
+		OBJ_228 /* CGFloat+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* CGFloat+Round.swift */; };
+		OBJ_229 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Measurement.swift */; };
+		OBJ_230 /* NSAttributedString+Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* NSAttributedString+Copy.swift */; };
+		OBJ_231 /* YogaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* YogaText.swift */; };
+		OBJ_233 /* YogaSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "YogaSwift::YogaSwift::Product" /* YogaSwift.framework */; };
+		OBJ_234 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yoga::Yoga::Product" /* Yoga.framework */; };
+		OBJ_242 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Package.swift */; };
+		OBJ_248 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* Package.swift */; };
+		OBJ_253 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Edges.swift */; };
+		OBJ_254 /* YGValue+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* YGValue+Utils.swift */; };
+		OBJ_255 /* YogaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* YogaNode.swift */; };
+		OBJ_256 /* YogaSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* YogaSize.swift */; };
+		OBJ_258 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Yoga::Yoga::Product" /* Yoga.framework */; };
+		OBJ_265 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7F14830248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TableModelBuilder::TableModelBuilder";
+			remoteInfo = TableModelBuilder;
+		};
+		B7F14831248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "YogaLayout::YogaLayout";
+			remoteInfo = YogaLayout;
+		};
+		B7F14832248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "YogaSwift::YogaSwift";
+			remoteInfo = YogaSwift;
+		};
+		B7F14833248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yoga::Yoga";
+			remoteInfo = Yoga;
+		};
+		B7F14834248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yoga::Yoga";
+			remoteInfo = Yoga;
+		};
+		B7F14835248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "YogaSwift::YogaSwift";
+			remoteInfo = YogaSwift;
+		};
+		B7F14836248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yoga::Yoga";
+			remoteInfo = Yoga;
+		};
+		B7F14837248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TableController::TableController";
+			remoteInfo = TableController;
+		};
+		B7F14838248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "UIUtils::UIUtils";
+			remoteInfo = UIUtils;
+		};
+		B7F14839248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "UIUtils::UIUtils";
+			remoteInfo = UIUtils;
+		};
+		B7F1483A248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TableController::TableController";
+			remoteInfo = TableController;
+		};
+		B7F1483B248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "UIUtils::UIUtils";
+			remoteInfo = UIUtils;
+		};
+		B7F1483C248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "YogaLayout::YogaLayout";
+			remoteInfo = YogaLayout;
+		};
+		B7F1483D248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "YogaSwift::YogaSwift";
+			remoteInfo = YogaSwift;
+		};
+		B7F1483E248939F200BE9DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Yoga::Yoga";
+			remoteInfo = Yoga;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		OBJ_12 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fanruten/Work/YogaPlayground/Packages/TableModelBuilder/Package.swift; sourceTree = "<group>"; };
+		OBJ_13 /* BaseTableModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableModelBuilder.swift; sourceTree = "<group>"; };
+		OBJ_14 /* LayoutCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutCellHelper.swift; sourceTree = "<group>"; };
+		OBJ_15 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fanruten/Work/YogaPlayground/Packages/TableController/Package.swift; sourceTree = "<group>"; };
+		OBJ_19 /* AnimatedTableChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTableChange.swift; sourceTree = "<group>"; };
+		OBJ_20 /* ListDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDiff.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ModelTranformGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTranformGenerator.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* AutoDiffCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDiffCollectionController.swift; sourceTree = "<group>"; };
+		OBJ_25 /* AutoDiffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDiffViewController.swift; sourceTree = "<group>"; };
+		OBJ_26 /* OverlayHighlightedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayHighlightedCell.swift; sourceTree = "<group>"; };
+		OBJ_28 /* CellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHelper.swift; sourceTree = "<group>"; };
+		OBJ_29 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		OBJ_30 /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fanruten/Work/YogaPlayground/Packages/UIUtils/Package.swift; sourceTree = "<group>"; };
+		OBJ_34 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
+		OBJ_36 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		OBJ_38 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_40 /* TapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapHandler.swift; sourceTree = "<group>"; };
+		OBJ_41 /* UIActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActions.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fanruten/Work/YogaPlayground/Packages/YogaLayout/Package.swift; sourceTree = "<group>"; };
+		OBJ_46 /* ImageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLayout.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		OBJ_48 /* StackLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayout.swift; sourceTree = "<group>"; };
+		OBJ_49 /* TextLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLayout.swift; sourceTree = "<group>"; };
+		OBJ_50 /* WrappedViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedViewLayout.swift; sourceTree = "<group>"; };
+		OBJ_52 /* CompoundLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundLayout.swift; sourceTree = "<group>"; };
+		OBJ_53 /* LayoutContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutContainerView.swift; sourceTree = "<group>"; };
+		OBJ_54 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		OBJ_57 /* ViewCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCreator.swift; sourceTree = "<group>"; };
+		OBJ_59 /* CGFloat+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Round.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		OBJ_61 /* NSAttributedString+Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Copy.swift"; sourceTree = "<group>"; };
+		OBJ_62 /* YogaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaText.swift; sourceTree = "<group>"; };
+		OBJ_64 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fanruten/Work/YogaPlayground/Packages/YogaSwift/Package.swift; sourceTree = "<group>"; };
+		OBJ_65 /* Edges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edges.swift; sourceTree = "<group>"; };
+		OBJ_66 /* YGValue+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YGValue+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_67 /* YogaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaNode.swift; sourceTree = "<group>"; };
+		OBJ_68 /* YogaSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaSize.swift; sourceTree = "<group>"; };
+		OBJ_70 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fanruten/Work/YogaPlayground/Packages/Yoga/Package.swift; sourceTree = "<group>"; };
+		OBJ_73 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		OBJ_74 /* YGConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGConfig.cpp; sourceTree = "<group>"; };
+		OBJ_75 /* YGEnums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
+		OBJ_76 /* YGLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
+		OBJ_77 /* YGMarker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGMarker.cpp; sourceTree = "<group>"; };
+		OBJ_78 /* YGNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
+		OBJ_79 /* YGNodePrint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
+		OBJ_8 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		OBJ_80 /* YGStyle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
+		OBJ_81 /* YGValue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGValue.cpp; sourceTree = "<group>"; };
+		OBJ_82 /* Yoga.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
+		OBJ_83 /* log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
+		OBJ_85 /* YGEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
+		OBJ_86 /* Yoga-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yoga-umbrella.h"; sourceTree = "<group>"; };
+		OBJ_87 /* YGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
+		OBJ_88 /* Yoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		OBJ_89 /* YGValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGValue.h; sourceTree = "<group>"; };
+		"PlaygroundShim::PlaygroundShim::Product" /* PlaygroundShim.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlaygroundShim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"TableController::TableController::Product" /* TableController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TableController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"TableModelBuilder::TableModelBuilder::Product" /* TableModelBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TableModelBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"UIUtils::UIUtils::Product" /* UIUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Yoga::Yoga::Product" /* Yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"YogaLayout::YogaLayout::Product" /* YogaLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YogaLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"YogaSwift::YogaSwift::Product" /* YogaSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YogaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_105 /* TableModelBuilder.framework in Frameworks */,
+				OBJ_106 /* TableController.framework in Frameworks */,
+				OBJ_107 /* UIUtils.framework in Frameworks */,
+				OBJ_108 /* YogaLayout.framework in Frameworks */,
+				OBJ_109 /* YogaSwift.framework in Frameworks */,
+				OBJ_110 /* Yoga.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_143 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_144 /* UIUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_160 /* YogaLayout.framework in Frameworks */,
+				OBJ_161 /* YogaSwift.framework in Frameworks */,
+				OBJ_162 /* Yoga.framework in Frameworks */,
+				OBJ_163 /* TableController.framework in Frameworks */,
+				OBJ_164 /* UIUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_213 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_233 /* YogaSwift.framework in Frameworks */,
+				OBJ_234 /* Yoga.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_258 /* Yoga.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* TableModelBuilder */,
+				OBJ_16 /* TableController */,
+				OBJ_31 /* UIUtils */,
+				OBJ_42 /* YogaLayout */,
+				OBJ_63 /* YogaSwift */,
+				OBJ_69 /* Yoga */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_11 /* TableModelBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* Package.swift */,
+				OBJ_13 /* BaseTableModelBuilder.swift */,
+				OBJ_14 /* LayoutCellHelper.swift */,
+				OBJ_15 /* SeparatorView.swift */,
+			);
+			name = TableModelBuilder;
+			path = ../TableModelBuilder/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* TableController */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* Package.swift */,
+				OBJ_18 /* Changes */,
+				OBJ_22 /* Collection+Safe.swift */,
+				OBJ_23 /* DiffController */,
+				OBJ_27 /* Model */,
+			);
+			name = TableController;
+			path = ../TableController/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* Changes */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* AnimatedTableChange.swift */,
+				OBJ_20 /* ListDiff.swift */,
+				OBJ_21 /* ModelTranformGenerator.swift */,
+			);
+			path = Changes;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* DiffController */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* AutoDiffCollectionController.swift */,
+				OBJ_25 /* AutoDiffViewController.swift */,
+				OBJ_26 /* OverlayHighlightedCell.swift */,
+			);
+			path = DiffController;
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* CellHelper.swift */,
+				OBJ_29 /* TableModel.swift */,
+				OBJ_30 /* TableSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* UIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Package.swift */,
+				OBJ_33 /* AttributedStringBuilder */,
+				OBJ_35 /* AutoLayout */,
+				OBJ_37 /* Colors */,
+				OBJ_39 /* TapHandler */,
+			);
+			name = UIUtils;
+			path = ../UIUtils/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_33 /* AttributedStringBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_34 /* AttributedStringBuilder.swift */,
+			);
+			path = AttributedStringBuilder;
+			sourceTree = "<group>";
+		};
+		OBJ_35 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_36 /* UIView+AutoLayout.swift */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		OBJ_37 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* UIColor+Utils.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		OBJ_39 /* TapHandler */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_40 /* TapHandler.swift */,
+				OBJ_41 /* UIActions.swift */,
+			);
+			path = TapHandler;
+			sourceTree = "<group>";
+		};
+		OBJ_42 /* YogaLayout */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* Package.swift */,
+				OBJ_44 /* LayoutEngine */,
+				OBJ_58 /* UIKit+Yoga */,
+			);
+			name = YogaLayout;
+			path = ../YogaLayout/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_44 /* LayoutEngine */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* Layout */,
+				OBJ_51 /* Utilities */,
+				OBJ_55 /* ViewCreator */,
+			);
+			path = LayoutEngine;
+			sourceTree = "<group>";
+		};
+		OBJ_45 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_46 /* ImageLayout.swift */,
+				OBJ_47 /* Layout.swift */,
+				OBJ_48 /* StackLayout.swift */,
+				OBJ_49 /* TextLayout.swift */,
+				OBJ_50 /* WrappedViewLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_9 /* Tests */,
+				OBJ_10 /* Dependencies */,
+				OBJ_90 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_51 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_52 /* CompoundLayout.swift */,
+				OBJ_53 /* LayoutContainerView.swift */,
+				OBJ_54 /* LayoutView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		OBJ_55 /* ViewCreator */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_56 /* Graph.swift */,
+				OBJ_57 /* ViewCreator.swift */,
+			);
+			path = ViewCreator;
+			sourceTree = "<group>";
+		};
+		OBJ_58 /* UIKit+Yoga */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_59 /* CGFloat+Round.swift */,
+				OBJ_60 /* Measurement.swift */,
+				OBJ_61 /* NSAttributedString+Copy.swift */,
+				OBJ_62 /* YogaText.swift */,
+			);
+			path = "UIKit+Yoga";
+			sourceTree = "<group>";
+		};
+		OBJ_63 /* YogaSwift */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_64 /* Package.swift */,
+				OBJ_65 /* Edges.swift */,
+				OBJ_66 /* YGValue+Utils.swift */,
+				OBJ_67 /* YogaNode.swift */,
+				OBJ_68 /* YogaSize.swift */,
+			);
+			name = YogaSwift;
+			path = ../YogaSwift/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_69 /* Yoga */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_70 /* Package.swift */,
+				OBJ_71 /* lib */,
+				OBJ_84 /* public */,
+			);
+			name = Yoga;
+			path = ../Yoga/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Stub.swift */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_71 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_72 /* yoga */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		OBJ_72 /* yoga */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_73 /* Utils.cpp */,
+				OBJ_74 /* YGConfig.cpp */,
+				OBJ_75 /* YGEnums.cpp */,
+				OBJ_76 /* YGLayout.cpp */,
+				OBJ_77 /* YGMarker.cpp */,
+				OBJ_78 /* YGNode.cpp */,
+				OBJ_79 /* YGNodePrint.cpp */,
+				OBJ_80 /* YGStyle.cpp */,
+				OBJ_81 /* YGValue.cpp */,
+				OBJ_82 /* Yoga.cpp */,
+				OBJ_83 /* log.cpp */,
+			);
+			path = yoga;
+			sourceTree = "<group>";
+		};
+		OBJ_84 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_85 /* YGEnums.h */,
+				OBJ_86 /* Yoga-umbrella.h */,
+				OBJ_87 /* YGMacros.h */,
+				OBJ_88 /* Yoga.h */,
+				OBJ_89 /* YGValue.h */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		OBJ_9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"TableController::TableController::Product" /* TableController.framework */,
+				"YogaLayout::YogaLayout::Product" /* YogaLayout.framework */,
+				"TableModelBuilder::TableModelBuilder::Product" /* TableModelBuilder.framework */,
+				"PlaygroundShim::PlaygroundShim::Product" /* PlaygroundShim.framework */,
+				"UIUtils::UIUtils::Product" /* UIUtils.framework */,
+				"Yoga::Yoga::Product" /* Yoga.framework */,
+				"YogaSwift::YogaSwift::Product" /* YogaSwift.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		OBJ_207 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_208 /* YGEnums.h in Headers */,
+				OBJ_209 /* Yoga-umbrella.h in Headers */,
+				OBJ_210 /* YGMacros.h in Headers */,
+				OBJ_211 /* Yoga.h in Headers */,
+				OBJ_212 /* YGValue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		"PlaygroundShim::PlaygroundShim" /* PlaygroundShim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_99 /* Build configuration list for PBXNativeTarget "PlaygroundShim" */;
+			buildPhases = (
+				OBJ_102 /* Sources */,
+				OBJ_104 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_111 /* PBXTargetDependency */,
+				OBJ_113 /* PBXTargetDependency */,
+				OBJ_115 /* PBXTargetDependency */,
+				OBJ_117 /* PBXTargetDependency */,
+				OBJ_119 /* PBXTargetDependency */,
+				OBJ_121 /* PBXTargetDependency */,
+			);
+			name = PlaygroundShim;
+			productName = PlaygroundShim;
+			productReference = "PlaygroundShim::PlaygroundShim::Product" /* PlaygroundShim.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PlaygroundShim::SwiftPMPackageDescription" /* PlaygroundShimPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_124 /* Build configuration list for PBXNativeTarget "PlaygroundShimPackageDescription" */;
+			buildPhases = (
+				OBJ_127 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaygroundShimPackageDescription;
+			productName = PlaygroundShimPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"TableController::SwiftPMPackageDescription" /* TableControllerPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_147 /* Build configuration list for PBXNativeTarget "TableControllerPackageDescription" */;
+			buildPhases = (
+				OBJ_150 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableControllerPackageDescription;
+			productName = TableControllerPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"TableController::TableController" /* TableController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_129 /* Build configuration list for PBXNativeTarget "TableController" */;
+			buildPhases = (
+				OBJ_132 /* Sources */,
+				OBJ_143 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_145 /* PBXTargetDependency */,
+			);
+			name = TableController;
+			productName = TableController;
+			productReference = "TableController::TableController::Product" /* TableController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"TableModelBuilder::SwiftPMPackageDescription" /* TableModelBuilderPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "TableModelBuilderPackageDescription" */;
+			buildPhases = (
+				OBJ_174 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableModelBuilderPackageDescription;
+			productName = TableModelBuilderPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"TableModelBuilder::TableModelBuilder" /* TableModelBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_152 /* Build configuration list for PBXNativeTarget "TableModelBuilder" */;
+			buildPhases = (
+				OBJ_155 /* Sources */,
+				OBJ_159 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_165 /* PBXTargetDependency */,
+				OBJ_166 /* PBXTargetDependency */,
+				OBJ_167 /* PBXTargetDependency */,
+				OBJ_168 /* PBXTargetDependency */,
+				OBJ_169 /* PBXTargetDependency */,
+			);
+			name = TableModelBuilder;
+			productName = TableModelBuilder;
+			productReference = "TableModelBuilder::TableModelBuilder::Product" /* TableModelBuilder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"UIUtils::SwiftPMPackageDescription" /* UIUtilsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_187 /* Build configuration list for PBXNativeTarget "UIUtilsPackageDescription" */;
+			buildPhases = (
+				OBJ_190 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIUtilsPackageDescription;
+			productName = UIUtilsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"UIUtils::UIUtils" /* UIUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_176 /* Build configuration list for PBXNativeTarget "UIUtils" */;
+			buildPhases = (
+				OBJ_179 /* Sources */,
+				OBJ_185 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIUtils;
+			productName = UIUtils;
+			productReference = "UIUtils::UIUtils::Product" /* UIUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Yoga::SwiftPMPackageDescription" /* YogaPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_244 /* Build configuration list for PBXNativeTarget "YogaPackageDescription" */;
+			buildPhases = (
+				OBJ_247 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YogaPackageDescription;
+			productName = YogaPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Yoga::Yoga" /* Yoga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_192 /* Build configuration list for PBXNativeTarget "Yoga" */;
+			buildPhases = (
+				OBJ_195 /* Sources */,
+				OBJ_207 /* Headers */,
+				OBJ_213 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yoga;
+			productName = Yoga;
+			productReference = "Yoga::Yoga::Product" /* Yoga.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"YogaLayout::SwiftPMPackageDescription" /* YogaLayoutPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_238 /* Build configuration list for PBXNativeTarget "YogaLayoutPackageDescription" */;
+			buildPhases = (
+				OBJ_241 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YogaLayoutPackageDescription;
+			productName = YogaLayoutPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"YogaLayout::YogaLayout" /* YogaLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_214 /* Build configuration list for PBXNativeTarget "YogaLayout" */;
+			buildPhases = (
+				OBJ_217 /* Sources */,
+				OBJ_232 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_235 /* PBXTargetDependency */,
+				OBJ_236 /* PBXTargetDependency */,
+			);
+			name = YogaLayout;
+			productName = YogaLayout;
+			productReference = "YogaLayout::YogaLayout::Product" /* YogaLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"YogaSwift::SwiftPMPackageDescription" /* YogaSwiftPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_261 /* Build configuration list for PBXNativeTarget "YogaSwiftPackageDescription" */;
+			buildPhases = (
+				OBJ_264 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YogaSwiftPackageDescription;
+			productName = YogaSwiftPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"YogaSwift::YogaSwift" /* YogaSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_249 /* Build configuration list for PBXNativeTarget "YogaSwift" */;
+			buildPhases = (
+				OBJ_252 /* Sources */,
+				OBJ_257 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_259 /* PBXTargetDependency */,
+			);
+			name = YogaSwift;
+			productName = YogaSwift;
+			productReference = "YogaSwift::YogaSwift::Product" /* YogaSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "PlaygroundShim" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"PlaygroundShim::PlaygroundShim" /* PlaygroundShim */,
+				"PlaygroundShim::SwiftPMPackageDescription" /* PlaygroundShimPackageDescription */,
+				"TableController::TableController" /* TableController */,
+				"TableController::SwiftPMPackageDescription" /* TableControllerPackageDescription */,
+				"TableModelBuilder::TableModelBuilder" /* TableModelBuilder */,
+				"TableModelBuilder::SwiftPMPackageDescription" /* TableModelBuilderPackageDescription */,
+				"UIUtils::UIUtils" /* UIUtils */,
+				"UIUtils::SwiftPMPackageDescription" /* UIUtilsPackageDescription */,
+				"Yoga::Yoga" /* Yoga */,
+				"YogaLayout::YogaLayout" /* YogaLayout */,
+				"YogaLayout::SwiftPMPackageDescription" /* YogaLayoutPackageDescription */,
+				"Yoga::SwiftPMPackageDescription" /* YogaPackageDescription */,
+				"YogaSwift::YogaSwift" /* YogaSwift */,
+				"YogaSwift::SwiftPMPackageDescription" /* YogaSwiftPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_103 /* Stub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_128 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_133 /* AnimatedTableChange.swift in Sources */,
+				OBJ_134 /* ListDiff.swift in Sources */,
+				OBJ_135 /* ModelTranformGenerator.swift in Sources */,
+				OBJ_136 /* Collection+Safe.swift in Sources */,
+				OBJ_137 /* AutoDiffCollectionController.swift in Sources */,
+				OBJ_138 /* AutoDiffViewController.swift in Sources */,
+				OBJ_139 /* OverlayHighlightedCell.swift in Sources */,
+				OBJ_140 /* CellHelper.swift in Sources */,
+				OBJ_141 /* TableModel.swift in Sources */,
+				OBJ_142 /* TableSection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_151 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_156 /* BaseTableModelBuilder.swift in Sources */,
+				OBJ_157 /* LayoutCellHelper.swift in Sources */,
+				OBJ_158 /* SeparatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_175 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_180 /* AttributedStringBuilder.swift in Sources */,
+				OBJ_181 /* UIView+AutoLayout.swift in Sources */,
+				OBJ_182 /* UIColor+Utils.swift in Sources */,
+				OBJ_183 /* TapHandler.swift in Sources */,
+				OBJ_184 /* UIActions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_191 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_196 /* Utils.cpp in Sources */,
+				OBJ_197 /* YGConfig.cpp in Sources */,
+				OBJ_198 /* YGEnums.cpp in Sources */,
+				OBJ_199 /* YGLayout.cpp in Sources */,
+				OBJ_200 /* YGMarker.cpp in Sources */,
+				OBJ_201 /* YGNode.cpp in Sources */,
+				OBJ_202 /* YGNodePrint.cpp in Sources */,
+				OBJ_203 /* YGStyle.cpp in Sources */,
+				OBJ_204 /* YGValue.cpp in Sources */,
+				OBJ_205 /* Yoga.cpp in Sources */,
+				OBJ_206 /* log.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_218 /* ImageLayout.swift in Sources */,
+				OBJ_219 /* Layout.swift in Sources */,
+				OBJ_220 /* StackLayout.swift in Sources */,
+				OBJ_221 /* TextLayout.swift in Sources */,
+				OBJ_222 /* WrappedViewLayout.swift in Sources */,
+				OBJ_223 /* CompoundLayout.swift in Sources */,
+				OBJ_224 /* LayoutContainerView.swift in Sources */,
+				OBJ_225 /* LayoutView.swift in Sources */,
+				OBJ_226 /* Graph.swift in Sources */,
+				OBJ_227 /* ViewCreator.swift in Sources */,
+				OBJ_228 /* CGFloat+Round.swift in Sources */,
+				OBJ_229 /* Measurement.swift in Sources */,
+				OBJ_230 /* NSAttributedString+Copy.swift in Sources */,
+				OBJ_231 /* YogaText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_241 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_242 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_247 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_248 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_253 /* Edges.swift in Sources */,
+				OBJ_254 /* YGValue+Utils.swift in Sources */,
+				OBJ_255 /* YogaNode.swift in Sources */,
+				OBJ_256 /* YogaSize.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_264 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_265 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TableModelBuilder::TableModelBuilder" /* TableModelBuilder */;
+			targetProxy = B7F14830248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_113 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TableController::TableController" /* TableController */;
+			targetProxy = B7F1483A248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "UIUtils::UIUtils" /* UIUtils */;
+			targetProxy = B7F1483B248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_117 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "YogaLayout::YogaLayout" /* YogaLayout */;
+			targetProxy = B7F1483C248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "YogaSwift::YogaSwift" /* YogaSwift */;
+			targetProxy = B7F1483D248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yoga::Yoga" /* Yoga */;
+			targetProxy = B7F1483E248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "UIUtils::UIUtils" /* UIUtils */;
+			targetProxy = B7F14838248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "YogaLayout::YogaLayout" /* YogaLayout */;
+			targetProxy = B7F14831248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "YogaSwift::YogaSwift" /* YogaSwift */;
+			targetProxy = B7F14835248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yoga::Yoga" /* Yoga */;
+			targetProxy = B7F14836248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TableController::TableController" /* TableController */;
+			targetProxy = B7F14837248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_169 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "UIUtils::UIUtils" /* UIUtils */;
+			targetProxy = B7F14839248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "YogaSwift::YogaSwift" /* YogaSwift */;
+			targetProxy = B7F14832248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_236 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yoga::Yoga" /* Yoga */;
+			targetProxy = B7F14834248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+		OBJ_259 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Yoga::Yoga" /* Yoga */;
+			targetProxy = B7F14833248939F200BE9DB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/PlaygroundShim_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PlaygroundShim;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PlaygroundShim;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_101 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/PlaygroundShim_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PlaygroundShim;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PlaygroundShim;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/TableController_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TableController;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TableController;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/TableController_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TableController;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TableController;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/TableModelBuilder_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TableModelBuilder;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TableModelBuilder;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/TableModelBuilder_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TableModelBuilder;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TableModelBuilder;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/UIUtils_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = UIUtils;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = UIUtils;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/UIUtils_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = UIUtils;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = UIUtils;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_189 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+					lib/yoga,
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/Yoga_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = ../Yoga/Sources/Yoga.modulemap;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Yoga;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = Yoga;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+					lib/yoga,
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/Yoga_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = ../Yoga/Sources/Yoga.modulemap;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Yoga;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = Yoga;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/YogaLayout_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = YogaLayout;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = YogaLayout;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/YogaLayout_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = YogaLayout;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = YogaLayout;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/YogaSwift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = YogaSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = YogaSwift;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_251 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Yoga/Sources/public",
+				);
+				INFOPLIST_FILE = PlaygroundShim.xcodeproj/YogaSwift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = YogaSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = YogaSwift;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode11.5.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_124 /* Build configuration list for PBXNativeTarget "PlaygroundShimPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_125 /* Debug */,
+				OBJ_126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_129 /* Build configuration list for PBXNativeTarget "TableController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_130 /* Debug */,
+				OBJ_131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_147 /* Build configuration list for PBXNativeTarget "TableControllerPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_148 /* Debug */,
+				OBJ_149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_152 /* Build configuration list for PBXNativeTarget "TableModelBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_153 /* Debug */,
+				OBJ_154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_171 /* Build configuration list for PBXNativeTarget "TableModelBuilderPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_172 /* Debug */,
+				OBJ_173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_176 /* Build configuration list for PBXNativeTarget "UIUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_177 /* Debug */,
+				OBJ_178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_187 /* Build configuration list for PBXNativeTarget "UIUtilsPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_188 /* Debug */,
+				OBJ_189 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_192 /* Build configuration list for PBXNativeTarget "Yoga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_193 /* Debug */,
+				OBJ_194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "PlaygroundShim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_214 /* Build configuration list for PBXNativeTarget "YogaLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_215 /* Debug */,
+				OBJ_216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_238 /* Build configuration list for PBXNativeTarget "YogaLayoutPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_239 /* Debug */,
+				OBJ_240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_244 /* Build configuration list for PBXNativeTarget "YogaPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_245 /* Debug */,
+				OBJ_246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_249 /* Build configuration list for PBXNativeTarget "YogaSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_250 /* Debug */,
+				OBJ_251 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_261 /* Build configuration list for PBXNativeTarget "YogaSwiftPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_262 /* Debug */,
+				OBJ_263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_99 /* Build configuration list for PBXNativeTarget "PlaygroundShim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_100 /* Debug */,
+				OBJ_101 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
